@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Profile = (name, tag, location, image, stats) => {
+const Profile = ({name, tag, location, image, stats}) => {
+  const {followers, views, likes} = stats;
   return (
     <div>
   <div>
@@ -16,19 +17,19 @@ const Profile = (name, tag, location, image, stats) => {
   <ul>
     <li>
       <span>Followers</span>
-        <span>{stats.followers}</span>
+        <span>{followers}</span>
     </li>
     <li>
       <span>Views</span>
-      <span>{stats.views}</span>
+      <span>{views}</span>
     </li>
     <li>
       <span>Likes</span>
-      <span>{stats.likes}</span>
+      <span>{likes}</span>
     </li>
   </ul>
 </div>
   )
 }
 
-export default Profile
+export default Profile;
