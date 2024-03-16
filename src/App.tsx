@@ -5,23 +5,16 @@ import Profile from "../src/components/Profile/Profile.jsx";
 import FriendList from "../src/components/FriendList/FriendList.jsx";
 
 function App() {
-  const { username, tag, location, avatar, stats } = userData;
-  const { avatarFriends, nameFriends, isOnline, id } = friends;
   return (
     <>
       <Profile
-        name={username}
-        tag={tag}
-        location={location}
-        image={avatar}
-        stats={stats}
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
       />
-      <FriendList
-        avatarFriends={avatarFriends}
-        name={nameFriends}
-        isOnline={isOnline}
-        key={id}
-      />
+      <FriendList friends={friends} />
     </>
   );
 }
