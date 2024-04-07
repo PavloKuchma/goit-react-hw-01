@@ -2,10 +2,16 @@ import React from "react";
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <div>
+    <div className="">
       <img src={avatar} alt={name} width="48" />
       <p>{name}</p>
-      <p>{isOnline ? <span>Online</span> : <span>Offline</span>}</p>
+      <p>
+        {isOnline ? (
+          <span className="isonline">Online</span>
+        ) : (
+          <span className="isoffline">Offline</span>
+        )}
+      </p>
     </div>
   );
 };
