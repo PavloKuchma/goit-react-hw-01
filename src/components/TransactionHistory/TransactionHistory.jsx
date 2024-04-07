@@ -1,6 +1,4 @@
-const TransactionHistory = (transactions) => {
-  // console.log(transactions);
-
+const TransactionHistory = ({ transactions }) => {
   return (
     <div>
       <table>
